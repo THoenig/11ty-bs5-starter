@@ -1,0 +1,6 @@
+@import "bootstrap";
+
+// Custom styles
+[aria-current="page"] {
+  @extend .text-decoration-underline;
+}
