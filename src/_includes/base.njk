@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+  <head>
+    {% block head %}
+      {% include "components/head.njk" %}
+    {% endblock head %}
+  </head>
+  <body class="d-flex flex-column justify-content-between min-vh-100">
+    {% block header %}
+      {% include "components/header.njk" %}
+    {% endblock header %}
+
+    {% block content %}
+      <main class="container my-3 flex-grow-1">
+        <h1>{{ env.current }}</h1>
+        {{ content|safe }}
+      </main>
+    {% endblock content %}
+
+    {% block footer %}
+      {% include "components/footer.njk" %}
+    {% endblock footer %}
+
+    {% block js %}
+      <script src="/_assets/main.js"></script>
+
+      {% if env.isDev %}
+        <script src="/_assets/main.js.map" rel="application/json"></script>
+      {% endif %}
+    {% endblock js %}
+  </body>
+</html>
