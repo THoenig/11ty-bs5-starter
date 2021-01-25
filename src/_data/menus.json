@@ -1,0 +1,12 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Github",
+      "url": "https://github.com/THoenig/11ty-bs5-starter/"
+    }
+  ]
+}
